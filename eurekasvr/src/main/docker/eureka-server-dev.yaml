@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: eureka-server
+  labels:
+    run: eureka-server
+  namespace: default
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: eureka-server
+    spec:
+      containers:
+      - name: eureka-server
+        image: johncarnell/tmx-eurekasvr/Eureka-Server
+        ports:
+        - containerPort: 8761
+          protocol: TCP
