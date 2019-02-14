@@ -42,7 +42,7 @@
     <docker.image.name>johncarnell/tmx-eurekasvr</docker.image.name>
     <docker.image.tag>Eureka-Service</docker.image.tag>
   </properties>
-
+ 
   <build>
      <plugins>
          <!-- We use the Resources plugin to filer Dockerfile and run.sh, it inserts actual JAR filename -->
