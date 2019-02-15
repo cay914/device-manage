@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata: 
+  name: conf-server
+  labels:
+    name: conf-server
+  namespace: default
+spec: 
+  selector:
+    run: conf-server
+  ports:
+  - name: port1
+    protocol: TCP
+    port: 8888
+    targetPort: 8888
+  type: NodePort

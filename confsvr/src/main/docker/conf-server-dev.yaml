@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: conf-server
+  labels:
+    run: conf-server
+  namespace: default
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: conf-server
+    spec:
+      imagePullSecrets:
+      - name: registry-secret
+      containers:
+      - name: conf-server
+        image: registry.cn-shenzhen.aliyuncs.com/cay914/configuration-service
+        ports:
+        - containerPort: 8888
+          protocol: TCP
