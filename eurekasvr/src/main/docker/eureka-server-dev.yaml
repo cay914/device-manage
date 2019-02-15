@@ -12,9 +12,11 @@ spec:
       labels:
         run: eureka-server
     spec:
+      imagePullSecrets:
+      - name: registry-secret
       containers:
       - name: eureka-server
-        image: johncarnell/tmx-eurekasvr/Eureka-Server
+        image: registry.cn-shenzhen.aliyuncs.com/cay914/eureka-service
         ports:
         - containerPort: 8761
           protocol: TCP
