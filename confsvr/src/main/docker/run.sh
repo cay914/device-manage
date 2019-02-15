@@ -4,7 +4,7 @@ getPort() {
 }
 
 EUREKASERVER_URI=http://10.244.1.48:8761/eureka/
-
+ 
 echo "********************************************************"
 echo "Waiting for the eureka server to start on port $(getPort 8761)"
 echo "********************************************************"
