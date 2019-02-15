@@ -3,10 +3,12 @@ getPort() {
     echo $1 | cut -d : -f 3 | xargs basename
 }
 
+EUREKASERVER_URI=http://10.244.1.48:8761/eureka/
+
 echo "********************************************************"
-echo "Waiting for the eureka server to start on port $(getPort $EUREKASERVER_PORT)"
+echo "Waiting for the eureka server to start on port $(getPort 8761)"
 echo "********************************************************"
-while ! `nc -z eurekaserver  $(getPort $EUREKASERVER_PORT)`; do sleep 3; done
+while ! `nc -z 10.244.1.48  8761`; do sleep 3; done
 echo "******* Eureka Server has started"
 
 echo "********************************************************"
