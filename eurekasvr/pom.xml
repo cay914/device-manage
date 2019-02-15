@@ -39,7 +39,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <start-class>com.thoughtmechanix.eurekasvr.EurekaServerApplication</start-class>
     <java.version>1.8</java.version>
-    <docker.image.name>eureka-service</docker.image.name>
+    <docker.image.name>registry-vpc.cn-shenzhen.aliyuncs.com/cay914/eureka-service</docker.image.name>
     <docker.image.tag>1.0.0</docker.image.tag>
   </properties>
  
