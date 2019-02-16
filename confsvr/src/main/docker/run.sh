@@ -3,7 +3,7 @@ getPort() {
     echo $1 | cut -d : -f 3 | xargs basename
 }
 
-EUREKASERVER_URI=http://10.244.1.58:8761/eureka/
+EUREKASERVER_URI=http://codebattery.top:30001/eureka/
  
 #echo "********************************************************"
 #echo "Waiting for the eureka server to start on port $(getPort 8761)"

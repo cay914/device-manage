@@ -17,6 +17,7 @@ spec:
       containers:
       - name: eureka-server
         image: registry.cn-shenzhen.aliyuncs.com/cay914/eureka-service:1.0.0
+        imagePullPolicy: Always
         ports:
         - containerPort: 8761
           protocol: TCP
