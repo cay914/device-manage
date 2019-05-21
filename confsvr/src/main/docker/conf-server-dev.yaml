@@ -16,7 +16,7 @@ spec:
       - name: registry-secret
       containers:
       - name: conf-server
-        image: registry.cn-shenzhen.aliyuncs.com/cay914/configuration-service
+        image: registry.cn-shenzhen.aliyuncs.com/cay914/configuration-service:1.0.0
         imagePullPolicy: Always
         ports:
         - containerPort: 8888
