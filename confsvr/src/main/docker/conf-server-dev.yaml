@@ -17,6 +17,7 @@ spec:
       containers:
       - name: conf-server
         image: registry.cn-shenzhen.aliyuncs.com/cay914/configuration-service
+        imagePullPolicy: Always
         ports:
         - containerPort: 8888
           protocol: TCP
