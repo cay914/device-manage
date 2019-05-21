@@ -12,7 +12,6 @@ spec:
   - name: port1
     protocol: TCP
     port: 8761
-    targetPort: 8761
-    nodePort: 38761
+    nodePort: 30761
   type: NodePort
   
