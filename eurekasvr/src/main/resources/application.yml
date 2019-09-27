@@ -6,10 +6,11 @@ eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
+    service-url:
+          defaultZone: http://localhost:30761/eureka/
   server:
     waitTimeInMsWhenSyncEmpty: 0
-  serviceUrl:
-    defaultZone: http://localhost:8761
+
 
 #Setting logging levels
 logging:

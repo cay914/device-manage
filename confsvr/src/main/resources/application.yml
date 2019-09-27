@@ -8,7 +8,6 @@
 #       -  A configuraton service that uses a git-based repository to read the files from
 #
 
-
 ####################################
 server:
   port: 30888
@@ -18,13 +17,18 @@ spring:
       discovery:
         enabled: true
       server:
-        encrypt.enabled: false
+        encrypt:
+          enabled: false
         git:
           uri: https://github.com/cay914/device-manage-conf-repo
-          searchPaths: licensingservice,organizationservice,specialroutesservice,zuulservice,authenticationservice
-          username: native-cloud-apps
-          password: 0ffended
+          search-paths: licensingservice,organizationservice,specialroutesservice,zuulservice,authenticationservice
+          username: cay914@gmail.com
+          password: cay1991091423
 
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:30761/eureka/
 
 ####
 #Classpath and file-based solution
@@ -47,6 +51,6 @@ spring:
 #Setting logging levels
 logging:
   level:
-    com.netflix: WARN
+    com.netflix: INFO
     org.springframework.web: WARN
     com.thoughtmechanix: DEBUG

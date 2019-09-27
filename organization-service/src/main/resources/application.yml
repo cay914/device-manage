@@ -1,14 +1,17 @@
-#spring:
-#  cloud:
-#    stream:
-#      bindings:
-#        output:
-#            destination:  orgChangeTopic
-#            content-type: application/json
-#        kafka:
-#          binder:
-#            zkNodes: localhost
-#            brokers: localhost
+server:
+  port: 9001
+
+spring:
+  cloud:
+    stream:
+      bindings:
+        output:
+            destination:  orgChangeTopic
+            content-type: application/json
+        kafka:
+          binder:
+            zkNodes: localhost
+            brokers: localhost
 
 #Setting the logging levels for the service
 logging:
@@ -25,3 +28,8 @@ eureka:
     fetchRegistry: true
     service-url:
         defaultZone: http://localhost:30761/eureka/
+        
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:8901/auth/user
