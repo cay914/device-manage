@@ -1,0 +1,18 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: eureka-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: eureka-service
+  template:
+    metadata:
+      name: eureka-service
+      labels:
+        app: eureka-service
+    spec:
+      containers:
+      - name: eureka-service
+        image: registry-vpc.cn-shenzhen.aliyuncs.com/cay914/eureka-service:latest
