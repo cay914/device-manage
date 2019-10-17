@@ -15,8 +15,8 @@ public class OrganizationService {
 
     @Autowired
     SimpleSourceBean simpleSourceBean;
-
     public Organization getOrg(String organizationId) {
+    	
         return orgRepository.findById(organizationId);
     }
 

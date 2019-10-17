@@ -33,12 +33,19 @@ public class LicenseService {
 
         Organization org = getOrganization(organizationId);
 
-        return license
-                .withOrganizationName( org.getName())
-                .withContactName( org.getContactName())
-                .withContactEmail( org.getContactEmail() )
-                .withContactPhone( org.getContactPhone() )
-                .withComment(config.getExampleProperty());
+        if(org!=null && license!=null) {        	
+        	license
+        	.withOrganizationName( org.getName())
+        	.withContactName( org.getContactName())
+        	.withContactEmail( org.getContactEmail() )
+        	.withContactPhone( org.getContactPhone() );
+        }
+
+        if(license!=null) {
+        	license.withComment(config.getExampleProperty());
+        }
+         
+        return license;
     }
 
     @HystrixCommand

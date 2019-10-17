@@ -29,7 +29,9 @@ public class OrganizationServiceController {
         logger.debug("Looking up data for org {}", organizationId);
 
         Organization org = orgService.getOrg(organizationId);
-        org.setContactName(org.getContactName());
+        if(org!=null) {        	
+        	org.setContactName(org.getContactName());
+        }
         return org;
     }
 
