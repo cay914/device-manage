@@ -1,12 +1,12 @@
 server:
-  port: 9001
+  port: 9003
 
 spring:
   cloud:
     stream:
       bindings:
         output:
-            destination:  orgChangeTopic
+            destination:  deviceTopic
             content-type: application/json
         kafka:
           binder:
