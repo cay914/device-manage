@@ -21,7 +21,7 @@ spring:
           enabled: false
         git:
           uri: https://github.com/cay914/device-manage-conf-repo
-          search-paths: licensingservice,organizationservice,specialroutesservice,zuulservice,authenticationservice
+          search-paths: licensingservice,organizationservice,specialroutesservice,zuulservice,authenticationservice,deviceservice
           username: cay914@gmail.com
           password: cay1991091423
 

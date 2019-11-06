@@ -27,4 +27,5 @@ zuul:
   routes:
     organizationservice: /organization/**
     licensingservice: /licensing/**
+    deviceservice: /device/**
   sensitiveHeaders: Cookie,Set-Cookie 

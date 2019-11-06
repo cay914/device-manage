@@ -25,12 +25,12 @@ public class DeviceService {
         device.setId( UUID.randomUUID().toString());
 
         deviceRepository.save(device);
-        simpleSourceBean.publishOrgChange("SAVE", device.getId());
+//        simpleSourceBean.publishOrgChange("SAVE", device.getId());
     }
 
     public void updateDevice(Device device){
         deviceRepository.save(device);
-        simpleSourceBean.publishOrgChange("UPDATE", device.getId());
+//        simpleSourceBean.publishOrgChange("UPDATE", device.getId());
 
     }
 

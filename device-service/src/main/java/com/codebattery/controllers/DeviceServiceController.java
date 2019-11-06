@@ -24,7 +24,7 @@ public class DeviceServiceController {
 
     @RequestMapping(value="/{deviceId}",method = RequestMethod.GET)
     public Device getDevice( @PathVariable("DeviceId") String deviceId) {
-        logger.debug("Looking up data for org {}", deviceId);
+        logger.debug("Looking up data for device {}", deviceId);
 
         Device device = deviceService.getDevice(deviceId);
 
