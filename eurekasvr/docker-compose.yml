@@ -18,5 +18,5 @@ services:
       interval: 30s
       timeout: 2m
       retries: 3
-    networks:
-      - host
+#    networks:
+#      - host
