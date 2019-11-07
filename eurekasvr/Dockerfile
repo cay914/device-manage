@@ -1,11 +1,7 @@
-FROM openjdk:8-jdk-alpine
+FROM jdk
 
 MAINTAINER Eric
-
 ENV LANG en_US.UTF-8
-RUN  apk update && apk upgrade && apk add netcat-openbsd
-RUN mkdir -p /usr/local/eurekaserver
-ADD eurekasvr-0.0.1-SNAPSHOT.jar /usr/local/eurekaserver/
-ADD run.sh run.sh
-RUN chmod +x run.sh
-CMD ./run.sh
+ADD target/eurekasvr-0.0.1-SNAPSHOT.jar /opt/eurekasvr/eurekasvr-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java", "-jar", "/opt//eurekasvr-0.0.1-SNAPSHOT.jar"]
+EXPOSE 30761

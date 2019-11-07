@@ -1,13 +1,13 @@
 version: "3.3"
 services:
   eureka-server:
-    image: "eurekaserver:latest"
+    image: "eurekasvr:latest"
     build: 
       context: .
       dockerfile: Dockerfile
-    container_name: eureka-server
+    container_name: eurekasvr
     volumes:
-    - /opt/device/eurekaserver:/usr/local/eurekaserver
+    - /opt/eurekasvr:/opt/eurekasvr
     network_mode: host
     ports:
       - "30761:30761"
