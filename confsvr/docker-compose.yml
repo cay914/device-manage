@@ -1,0 +1,22 @@
+version: "3.3"
+services:
+  eureka-server:
+    image: "configurationserver:latest"
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: configurationserver
+    volumes:
+    - /opt/configurationserver:/opt/configurationserver
+    network_mode: host
+    ports:
+      - "30888:30888"
+    extra_hosts:
+      - "host:192.168.3.18"
+    healthcheck:
+      test: curl --fail -s http://localhost:30888/health || exit 1
+      interval: 30s
+      timeout: 2m
+      retries: 3
+#    networks:
+#      - host
