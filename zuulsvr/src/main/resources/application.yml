@@ -25,8 +25,20 @@ eureka:
 zuul:
   prefix:  /api
   routes:
+    authenticationservice:
+      path: /uua/**
+      sensitiveHeaders:
     organizationservice: /organization/**
     licensingservice: /licensing/**
     deviceservice: /device/**
   sensitiveHeaders: Cookie,Set-Cookie 
   ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
+security:
+  oauth2:
+    client:
+      access-token-uri: http://localhost:8901/auth/oauth/token
+      user-authorization-uri: http://localhost:8901/auth/oauth/authorize
+      client-id: open-api
+    resource:
+      user-info-uri: http://localhost:8901/auth/user
+      prefer-token-info: false

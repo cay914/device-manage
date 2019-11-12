@@ -1,6 +1,7 @@
 spring:
   application:
     name: authenticationservice
+
   profiles:
     active:
       default
@@ -8,3 +9,8 @@ spring:
     config:
       enabled: true
       uri: http://localhost:30888
+
+security:
+  oauth2:
+    resource:
+      filter-order: 3
