@@ -11,6 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.codebattery.model.Member;
 import com.codebattery.services.UserService;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+
+@Api("登录接口")
 @RestController
 @RequestMapping(value="login")
 public class LoginController {
@@ -20,6 +25,8 @@ public class LoginController {
     @Autowired
     private UserService userService;
 
+    @ApiOperation(value="登录接口",notes="测试hello接口")
+    @ApiParam("没有参数")
     @RequestMapping(value="",method = RequestMethod.POST)
 //    @ResponseBody
 //    public Member login(@RequestBody LoginInfo info) {
@@ -27,6 +34,9 @@ public class LoginController {
         logger.debug("登录");
 
         Member m = userService.login(582L);
+        
+        
+        
 		return m;
     }
 

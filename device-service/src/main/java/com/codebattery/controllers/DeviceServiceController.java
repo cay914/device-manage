@@ -16,7 +16,7 @@ import com.codebattery.model.Device;
 import com.codebattery.services.DeviceService;
 
 @RestController
-@RequestMapping(value="v1/device")
+@RequestMapping(value="device")
 public class DeviceServiceController {
     @Autowired
     private DeviceService deviceService;

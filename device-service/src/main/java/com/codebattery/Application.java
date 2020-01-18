@@ -11,6 +11,8 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 
 import com.codebattery.utils.UserContextFilter;
 
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 import javax.servlet.Filter;
 
 
@@ -19,6 +21,7 @@ import javax.servlet.Filter;
 @EnableCircuitBreaker
 @EnableBinding(Source.class)
 @EnableResourceServer
+@EnableSwagger2
 public class Application {
     @Bean
     public Filter userContextFilter() {
