@@ -29,9 +29,9 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     service-url:
-        defaultZone: http://localhost:30761/eureka/
+        defaultZone: http://eureka.codebattery.top/eureka/
         
 security:
   oauth2:
     resource:
-      user-info-uri: http://localhost:8901/auth/user
+      user-info-uri: http://auth.codebattery.top/auth/user
