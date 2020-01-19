@@ -7,12 +7,12 @@ services:
       dockerfile: Dockerfile
     container_name: zuulsvr
     volumes:
-    - /opt/zuulsvr:/opt/zuulsvr
+    - /opt/zuulsvr:/opt/device/zuulsvr
     network_mode: host
     ports:
       - "5555:5555"
     extra_hosts:
-      - "host:192.168.3.18"
+      - "host:192.168.3.25"
     healthcheck:
       test: curl --fail -s http://localhost:5555/health || exit 1
       interval: 30s
