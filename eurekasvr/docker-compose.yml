@@ -7,12 +7,12 @@ services:
       dockerfile: Dockerfile
     container_name: eurekasvr
     volumes:
-    - /opt/eurekasvr:/opt/eurekasvr
+    - /opt/eurekasvr:/opt/device/eurekasvr
     network_mode: host
     ports:
       - "30761:30761"
     extra_hosts:
-      - "host:192.168.3.18"
+      - "host:192.168.3.25"
     healthcheck:
       test: curl --fail -s http://localhost:30761/health || exit 1
       interval: 30s
