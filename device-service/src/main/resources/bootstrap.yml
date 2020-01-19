@@ -7,4 +7,5 @@ spring:
   cloud:
     config:
       enabled: true
-      uri: http://conf.codebattery.top
+      uri: http://localhost:30888
+      profile: dev
