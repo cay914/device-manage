@@ -7,3 +7,4 @@ spring:
   cloud:
     config:
       enabled: true
+      uri: http://conf.codebattery.top
