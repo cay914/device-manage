@@ -17,6 +17,8 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
+import com.thoughtmechanix.zuulsvr.filters.ResponseFilter;
+
 import springfox.documentation.swagger.web.SwaggerResource;
 import springfox.documentation.swagger.web.SwaggerResourcesProvider;
 
@@ -53,6 +55,11 @@ public class ZuulServerApplication {
         config.addAllowedMethod("PATCH");
         source.registerCorsConfiguration("/**", config);
         return new CorsFilter(source);
+    }
+    
+    @Bean
+    public ResponseFilter responseFilter() {
+    	return new ResponseFilter();
     }
     
 	@Component
