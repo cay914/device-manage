@@ -53,7 +53,7 @@ public class ResponseFilter extends ZuulFilter{
 			ObjectMapper mapper = new ObjectMapper();  
 			bodyStr = StreamUtils.copyToString(stream, Charset.forName("UTF-8"));
 			HashMap jsonMap = mapper.readValue(bodyStr, HashMap.class); 
-			Response response = new Response("0", "", jsonMap);
+			Response response = new Response("200", "", jsonMap);
 			
 			ctx.setResponseBody(mapper.writeValueAsString(response));
 		} catch (IOException e) {
