@@ -28,7 +28,7 @@ eureka:
     ip-address: 47.112.198.72
     non-secure-port: 29003
   client:
-    enabled: false
+    enabled: true
     registerWithEureka: true
     fetchRegistry: true
     service-url:
