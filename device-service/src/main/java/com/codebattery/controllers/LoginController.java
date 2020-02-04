@@ -36,7 +36,6 @@ public class LoginController {
         Member m = userService.login(582L);
         
         
-        
 		return m;
     }
 
