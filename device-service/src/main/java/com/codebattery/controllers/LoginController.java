@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.codebattery.model.Member;
@@ -29,7 +30,7 @@ public class LoginController {
     @ApiOperation(value="登录接口",notes="测试hello接口", response=com.codebattery.model.Member.class)
     @ApiParam("没有参数")
     @RequestMapping(value="",method = RequestMethod.POST)
-//    @ResponseBody
+    @ResponseBody
 //    public Member login(@RequestBody LoginInfo info) {
     public Member login() {
         logger.debug("登录");
