@@ -14,6 +14,7 @@ import com.codebattery.services.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import io.swagger.annotations.ApiResponse;
 
 @Api("登录接口")
 @RestController
@@ -25,7 +26,7 @@ public class LoginController {
     @Autowired
     private UserService userService;
 
-    @ApiOperation(value="登录接口",notes="测试hello接口")
+    @ApiOperation(value="登录接口",notes="测试hello接口", response=com.codebattery.model.Member.class)
     @ApiParam("没有参数")
     @RequestMapping(value="",method = RequestMethod.POST)
 //    @ResponseBody
