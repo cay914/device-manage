@@ -19,8 +19,9 @@ public class Swagger2 {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.apiInfo(apiInfo())
 				.select()
-				.apis(RequestHandlerSelectors.basePackage("com.codebattery.controllers"))
-				.paths(PathSelectors.any())
+//				.apis(RequestHandlerSelectors.basePackage("com.codebattery.controllers"))
+//				.apis(RequestHandlerSelectors.basePackage("com.codebattery.controllers"))
+//				.paths(PathSelectors.any())
 				.build();
 	}
 
