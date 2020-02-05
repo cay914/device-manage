@@ -12,7 +12,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 @Entity
 @Table(name = "member")
-@ApiModel(value = "成员对象", description = "成员")
+@ApiModel(description = "成员")
 public class Member {
 	
 	@ApiModelProperty(value = "ID", required = true)
